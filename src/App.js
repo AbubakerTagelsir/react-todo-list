@@ -5,6 +5,7 @@ import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 import Navbar from './components/Navbar';
 import uuid from 'uuid';
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default class App extends Component {
 
   state = {
