@@ -34,16 +34,21 @@ export default class App extends Component {
       item: '',
       id: uuid(),
       editItem: false,
-    }, ()=>{console.log(this.state);
     });
     console.log("Change Appears!");
   }
 
-  clearList = () => {console.log("Clear List!");
+  clearList = () => {this.setState({
+    items:[]
+  });
   }
-  handleEdit = id => {console.log("Edit");
+  handleEdit = id => {console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
-  handleDelete = id => {console.log("Deleted!");
+  handleDelete = id => {
+    const filteredItems = this.state.items.filter(item=>item.id !== id);
+    this.setState({
+      items:filteredItems
+    });
   }
   render() {
     return (
